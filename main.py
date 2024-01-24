@@ -1,16 +1,8 @@
-
-import os
 from datetime import datetime
 import logging
 import asyncio
 from aiogram.filters.command import Command
-import g4f
 import json
-import pyaudio
-from vosk import Model, KaldiRecognizer
-from pathlib import Path
-#from aiogram.dispatcher.dispatcher import Dispatcher
-#from aiogram.client.bot import Bot
 from aiogram import *
 with open('db/users.json', encoding='utf-8') as f:
     users = json.load(f)
