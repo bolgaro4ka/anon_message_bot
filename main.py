@@ -18,7 +18,7 @@ with open('db/users.json', encoding='utf-8') as f:
 with open('db/sends.json', encoding='utf-8') as f:
     sends = json.load(f)
 
-bot = Bot(token="6488934022:AAEwuH2g2UZ3_b95NysWZQdN1W6mI48Z5vI")
+bot = Bot(token="YOUR_TOKEN")
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
 # Диспетчер
