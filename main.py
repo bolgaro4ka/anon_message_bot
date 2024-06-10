@@ -52,8 +52,9 @@ async def user_registration(msg: types.Message):
     # Выделение id рефера
     unique_code = extract_unique_code(msg.text)
     if unique_code:
-        await msg.answer(text=f"🪪 ID реферала найден! Это {users['users'][users['users'][str(current_chat)]['msg_by']]['name']}")
         users["users"][str(current_chat)]["msg_by"] = unique_code
+        await msg.answer(text=f"🪪 ID реферала найден! Это {users['users'][users['users'][str(current_chat)]['msg_by']]['name']}")
+        
     elif users["users"][str(current_chat)]["msg_by"]:
         await msg.answer(text=f"🪪 ID реферала найден! Это {users['users'][users['users'][str(current_chat)]['msg_by']]['name']}")
     else:
